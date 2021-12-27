@@ -14,13 +14,13 @@
 # limitations under the License.
 
 ARG DOCKER_UPSTREAM_REGISTRY
-ARG DOCKER_UPSTREAM_TAG=ubi8-latest
+ARG DOCKER_UPSTREAM_TAG=7.0.1
 
-FROM ${DOCKER_UPSTREAM_REGISTRY}confluentinc/cp-base-new:${DOCKER_UPSTREAM_TAG}
+FROM ${DOCKER_UPSTREAM_REGISTRY}dennisameling/cp-base-new:${DOCKER_UPSTREAM_TAG}
 
-ARG PROJECT_VERSION
-ARG ARTIFACT_ID
-ARG GIT_COMMIT
+ARG PROJECT_VERSION="7.0.1"
+ARG ARTIFACT_ID="cp-kafka"
+ARG GIT_COMMIT="unknown"
 
 LABEL maintainer="partner-support@confluent.io"
 LABEL vendor="Confluent"
